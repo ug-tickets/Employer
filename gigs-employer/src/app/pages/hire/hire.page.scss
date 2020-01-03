@@ -1,8 +1,28 @@
 .confirmbtn {
     width: 100%;
     border: solid 1px #3880ff;
-    background: transparent;
-    color: #3880ff;
+    background: #3880ff;
+    color: white;
     padding: 13px 25px;
     border-radius: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+ion-content {
+    --ion-background-color: rgb(235, 235, 235);
+}
+
+ion-card-content {
+    padding: 0;
+}
+
+ion-card {
+    margin: 0 0;
+    --ion-background-color: white;
+    padding: 0;
+}
+
+ion-grid {
+    --ion-background-color: white;
 }
