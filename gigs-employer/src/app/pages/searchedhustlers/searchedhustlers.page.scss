@@ -1,0 +1,36 @@
+ion-content {
+    --ion-background-color: rgb(235, 235, 235);
+}
+
+ion-card-content {
+    padding: 0;
+}
+
+ion-card {
+    margin: 0 0;
+    --ion-background-color: white;
+    padding: 0;
+}
+
+ion-grid {
+    --ion-background-color: white;
+}
+
+ion-item {
+    padding: 15px 5px;
+}
+
+ion-text {
+    padding-bottom: 7px;
+}
+
+.trivinfo {
+    color: gray;
+    font-size: 13px;
+}
+
+ion-icon {
+    color: rgb(0, 153, 255);
+    font-size: 11px;
+    letter-spacing: 10px;
+}

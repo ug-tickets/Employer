@@ -1,0 +1,150 @@
+ion-text {
+    font-size: 12px;
+}
+
+.stats {
+    height: auto;
+    padding: 15px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px rgb(233, 232, 232);
+    background: white;
+    margin: 0 16px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.stats nav {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.stats nav ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.stats nav ul li {
+    list-style: none;
+    float: left;
+    margin-right: 5px;
+    padding: 0 8px 15px 8px;
+    cursor: pointer;
+}
+
+.stat {
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+}
+
+.hustlerimg {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    z-index: 1;
+}
+
+.hustlerimg {}
+
+.hustlerinfo {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+}
+
+.hustlername {
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+}
+
+.hustlerskill {
+    text-align: center;
+    color: rgb(236, 236, 236);
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.hustlerrating {
+    color: rgb(240, 240, 240);
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.fullbio {
+    padding: 16px;
+    margin-top: 50px;
+}
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    --border-width: 0!important;
+    --border-color: transparent !important;
+}
+
+.header-md:after {
+    display: none !important;
+}
+
+.customtabs {
+    display: flex;
+    background-color: white;
+    padding: 20px 15px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.customtabs>div {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(204, 202, 202)
+}
+
+.customfooter {
+    bottom: -9px;
+}
+
+.hireme {
+    margin: 0 16px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3880ff;
+    color: white;
+}
+
+.floaterbuttons {
+    width: 100%;
+    margin-top: -20px;
+    position: absolute;
+    bottom: -50px;
+    z-index: 30;
+}
+
+ion-content {
+    --ion-background-color: rgb(235, 235, 235);
+}
+
+ion-card-content {
+    padding: 0;
+    --ion-background-color: white;
+}
+
+ion-card {
+    margin: 0 0;
+    --ion-background-color: white;
+    padding: 0;
+}
+
+.text-wrapper {
+    background: white;
+    padding: 10px 10px 100px;
+}
