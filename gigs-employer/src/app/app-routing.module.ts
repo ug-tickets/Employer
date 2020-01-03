@@ -12,7 +12,7 @@ const routes: Routes = [
     path: 'hired',
     loadChildren: () => import('./pages/hired/hired.module').then( m => m.HiredPageModule)
   },
-  {
+  { 
     path: 'hustlerbio',
     loadChildren: () => import('./pages/hustlerbio/hustlerbio.module').then( m => m.HustlerbioPageModule)
   },
@@ -40,6 +40,7 @@ const routes: Routes = [
     path: 'startpage',
     loadChildren: () => import('./pages/startpage/startpage.module').then( m => m.StartpagePageModule)
   },
+  
 ];
 
 @NgModule({
