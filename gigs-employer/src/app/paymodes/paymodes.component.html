@@ -1,3 +1,16 @@
-<p>
-  paymodes works!
-</p>
+<div class="paymodeoverlay" #payoverlay>
+    <div class="paymodules">
+        <div class="moduleswrapper">
+            <div class="paymethods">
+                <div>MTN</div>
+                <div>Cash</div>
+                <div>Card</div>
+            </div>
+            <div *ngIf="issearching" class="ion-text-center" style="padding-top: 20px;">
+                <ion-spinner color="primary"></ion-spinner>
+            </div>
+            <div *ngIf="!issearching" class="search-hustler" (click)="checking()">Search</div>
+        </div>
+    </div>
+
+</div>

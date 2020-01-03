@@ -1,9 +1,60 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>hire</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Hire</ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+    <ion-grid>
+        <ion-row>
+            <ion-col size-sm="10" offset-sm="1" class="ion-no-padding">
+
+                <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                    <ion-list>
+                        <ion-item>
+                            <ion-label position="floating">Gig:</ion-label>
+                            <ion-input type="text" name="gigtitle" required ngModel></ion-input>
+                        </ion-item>
+                        <ion-item style="margin-top: 20px;">
+                            <ion-label>Skill Needed:</ion-label>
+                            <ion-select name="skilltype" ngModel required>
+                                <ion-select-option value="any">Any</ion-select-option>
+                                <ion-select-option value="uptohs">Upto High School</ion-select-option>
+                                <ion-select-option value="abovehs">Above High School</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Location:</ion-label>
+                            <ion-input type="text" name="location" required ngModel></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Start:</ion-label>
+                            <ion-input type="text" name="starttime" required ngModel></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">End:</ion-label>
+                            <ion-input type="text" name="endtime" required ngModel></ion-input>
+                        </ion-item>
+                        <ion-item style="margin-top: 30px;" [hidden]="!f.valid">
+                            Price Estimate:
+                        </ion-item>
+
+                    </ion-list>
+                    <ion-col class="ion-no-padding">
+                        <button class="confirmbtn" type="submit" [disabled]="!f.valid">Confirm</button>
+
+                    </ion-col>
+                    <!-- <ion-col no-padding size="2">
+                      <ion-button color="primary" fill="outline" [disabled]="!f.valid">Pair</ion-button>
+
+                  </ion-col> -->
+
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 
 </ion-content>
