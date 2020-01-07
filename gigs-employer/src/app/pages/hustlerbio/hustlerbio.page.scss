@@ -14,10 +14,11 @@ ion-text {
     border-bottom-left-radius: 8px;
 }
 
-.stats nav {
-    height: 100%;
-    margin: 0;
+.stats div {
+    height: 45px;
+    margin-right: 25px;
     padding: 0;
+    font-size: 12px;
 }
 
 ion-img {
@@ -153,4 +154,9 @@ ion-card {
 .text-wrapper {
     background: white;
     padding: 10px 10px 100px;
+    min-height: 300px;
+}
+
+.nze .deno {
+    border: solid 1px red;
 }
