@@ -4,7 +4,7 @@ ion-text {
 
 .stats {
     height: auto;
-    padding: 10px 0 5px 0;
+    padding: 10px 0 0 10px;
     display: flex;
     justify-content: center;
     border-bottom: solid 1px rgb(233, 232, 232);
@@ -16,8 +16,8 @@ ion-text {
 
 .stats div {
     height: 45px;
-    margin-right: 25px;
-    padding: 0;
+    margin-right: 20px;
+    padding: 0 5px;
     font-size: 12px;
 }
 
@@ -157,6 +157,6 @@ ion-card {
     min-height: 300px;
 }
 
-.nze .deno {
-    border: solid 1px red;
+.highlighted {
+    border-bottom: solid 2px #5574F7;
 }

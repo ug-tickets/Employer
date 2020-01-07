@@ -15,42 +15,32 @@ export class HustlerbioPage implements OnInit, AfterViewInit {
 
   ngOnInit() {
   }
-  ngAfterViewInit() { 
-    //TODO: Change html navs to div coz divs will be easier to work with
+  ngAfterViewInit() {
     this.currentSelection.nativeElement.innerHTML = 'About';
 
-    const thecollection = this.elem.nativeElement.querySelectorAll('.nze');
+    const thecollection = this.elem.nativeElement.querySelectorAll('.whichsection');
     Array.from(thecollection).forEach((ele: HTMLElement) => {
       this.renderer.listen(ele, 'click', (e) => {
         // get parent element
         let parentNode;
-        if(e.target.className="nze") {
+        if (e.target.className == "whichsection") {
+          parentNode = e.target;
+
+        }
+        if (e.target.parentNode.classList.contains('whichsection')) {
+          // continue one level up
           parentNode = this.renderer.parentNode(e.target);
 
         }
-        if (e.target.parentNode.classList.contains('nze')) {
-          // continue one level up
-          parentNode = this.renderer.parentNode(e.target.parentNode); 
+        // get all children for the stats div
+        const rootEl = document.querySelector('.stats').children;
 
-        }
-        
-        Array.from(parentNode.children).forEach((elem: HTMLElement) => {
-          this.renderer.removeClass(elem, 'deno');
-        });
-        if (e.target.className == 'nze') { // he has clicked the li its self
-         // this.renderer.addClass(e.target, 'deno');
-         e.target.classList.add('deno');
-          
-
-        }
-        if (e.target.parentNode.classList.contains('nze')) { // he has clicked on the divs inside the li
-         // this.renderer.addClass(e.target.parentNode, 'deno');
-         //e.target.parentNode.classList.add('deno');
-
-        };
-
-
-        this.renderer.setProperty(this.currentSelection.nativeElement, 'innerHTML', e.target.innerText);
+        Array.from(rootEl).forEach((elem: HTMLElement) => {
+          this.renderer.removeClass(elem, 'highlighted');
+        }); 
+        // add class to parentNode
+        this.renderer.addClass(parentNode, 'highlighted');
+        this.renderer.setProperty(this.currentSelection.nativeElement, 'innerHTML', parentNode.childNodes[1].data);
       });
     });
   }
