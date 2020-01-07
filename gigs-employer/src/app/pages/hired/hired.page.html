@@ -1,10 +1,91 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>hired</ion-title>
+        <ion-title></ion-title>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    hired
+    <ion-segment scrollable (ionChange)="onFilter($event)">
+        <ion-segment-button value="pendingjobs" checked>Pending Jobs</ion-segment-button>
+        <ion-segment-button value="recenthustlers">Recently Hired</ion-segment-button>
+    </ion-segment>
+    <ion-list>
+        <ion-item *ngIf="!RecentHustlers">
+
+            <div style="display: flex; width: 100%; padding-top: 10px; padding-bottom: 5px;">
+                <div style="flex:3">
+                    <div style="display: flex;">
+                        <ion-avatar>
+                            <ion-img src="../../assets/img/deno.jpg"></ion-img>
+                        </ion-avatar>
+                        <div style="margin-left: 10px; padding-top: 5px;">
+                            <ion-label>Deno</ion-label>
+                            <div style="font-size: 12px; color: grey;">Tue 2 12:00</div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div style="flex:1">
+                    <ion-button color="primary" fill="outline" (click)="toProgress()">Start Job</ion-button>
+                </div>
+            </div>
+
+        </ion-item>
+        <div *ngIf="RecentHustlers">
+            <ion-item>
+
+                <div style="display: flex; width: 100%; padding-top: 10px; padding-bottom: 5px;">
+                    <div style="flex:3">
+                        <div style="display: flex;">
+                            <ion-avatar>
+                                <ion-img src="../../assets/img/deno.jpg"></ion-img>
+                            </ion-avatar>
+                            <div style="margin-left: 10px; padding-top: 5px; padding-bottom: 5px;">
+                                <ion-label>Mark</ion-label>
+                                <div style="font-size: 12px; color: grey;">Tue 2 12:00</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div style="flex:1">
+                        <ion-button color="primary" fill="outline">
+                            <ion-icon name="call"></ion-icon> &nbsp; Call&nbsp;&nbsp;</ion-button>
+                    </div>
+                </div>
+
+
+
+            </ion-item>
+
+            <ion-item>
+                <div style="display: flex; width: 100%; padding-top: 10px; padding-bottom: 5px;">
+                    <div style="flex:3">
+                        <div style="display: flex;">
+                            <ion-avatar>
+                                <ion-img src="../../assets/img/deno.jpg"></ion-img>
+                            </ion-avatar>
+                            <div style="margin-left: 10px; padding-top: 5px; padding-bottom: 5px;">
+                                <ion-label>Mark</ion-label>
+                                <div style="font-size: 12px; color: grey;">Tue 2 12:00</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div style="flex:1">
+                        <ion-button color="primary" fill="outline">
+                            <ion-icon name="call"></ion-icon> &nbsp; Call&nbsp;&nbsp;</ion-button>
+                    </div>
+                </div>
+            </ion-item>
+
+        </div>
+
+    </ion-list>
 
 </ion-content>

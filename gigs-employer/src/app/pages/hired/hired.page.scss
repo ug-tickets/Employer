@@ -1,0 +1,14 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    --border-width: 0!important;
+    --border-color: transparent !important;
+}
+
+.header-md:after {
+    display: none !important;
+}
+
+ion-item {
+    padding-bottom: 15px;
+}
