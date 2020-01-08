@@ -1,0 +1,51 @@
+ion-content {
+    --ion-background-color: rgb(235, 235, 235);
+    padding: 10px;
+}
+
+.jobbox {
+    height: auto;
+    background: white;
+    margin: 10px;
+}
+
+.indivjob {
+    border-bottom: solid 1px rgb(235, 235, 235);
+    padding: 10px;
+    ;
+}
+
+.indivjob:last-child {
+    border: none;
+}
+
+.gigmeta {
+    font-size: 11px;
+    line-height: 25px;
+    color: rgb(187, 185, 185);
+}
+
+.gigname {
+    line-height: 25px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.progressbar {
+    display: flex;
+}
+
+.progressbar span {
+    width: auto;
+    font-size: 10px;
+    color: rgb(131, 129, 129);
+}
+
+.progressbar div {
+    flex: 1;
+    padding: 0 5px;
+}
+
+.extendgig {
+    padding: 10px;
+}
