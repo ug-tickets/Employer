@@ -47,5 +47,26 @@ ion-content {
 }
 
 .extendgig {
-    padding: 10px;
+    padding: 0px;
+    display: flex;
+}
+
+.extendgig div {
+    flex: 1;
+}
+
+ion-list {
+    --ion-background-color: white;
+}
+
+ion-item {
+    border: none;
+}
+
+ion-alert div {
+    font-size: 10px;
+}
+
+ion-alert div[class='alert-button-inner'] {
+    font-size: 10px;
 }

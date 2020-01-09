@@ -10,8 +10,28 @@
             <div class="gigname">Photoshoot Gig</div>
             <div class="gigmeta">10-10-2020 10:00 to 10-10-2020 12:00</div>
             <div class="progressbar"><span>3hrs 30min.</span>
-                <div></div><span>100%</span></div>
+                <div style="width: 100%; padding-top: 5px;">
+                    <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+                </div><span>50%</span></div>
             <div class="extendgig">
+                <div></div>
+                <div>
+                    <ion-list lines="none" mode="md" class="ion-no-margin">
+                        <ion-item class="ion-no-margin">
+                            <ion-label style="font-size: 13px!important">{{extensionheader}}</ion-label>
+                            <ion-select value="brown" (ionChange)="onSelect($event)" okText="Okay" cancelText="Dismiss">
+                                <ion-select-option style="font-size: 13px!important" value="brown">30min.</ion-select-option>
+                                <ion-select-option value="blonde">1hr</ion-select-option>
+                                <ion-select-option value="black">1hr 30min</ion-select-option>
+                                <ion-select-option value="red">2hr</ion-select-option>
+                            </ion-select>
+                        </ion-item>
+                    </ion-list>
+                </div>
+
+            </div>
+            <div *ngIf="confirmit">
+                <ion-button expand="block" (click)="onConfirm()" color="primary">Confirm Extension</ion-button>
 
             </div>
         </div>
@@ -20,7 +40,9 @@
             <div class="gigname">Gate manning Gig</div>
             <div class="gigmeta">10-10-2020 10:00 to 10-10-2020 12:00</div>
             <div class="progressbar"><span>3hrs 30min.</span>
-                <div></div><span>100%</span></div>
+                <div style="width: 100%; padding-top: 5px;">
+                    <ion-progress-bar mode="ios" value="1"></ion-progress-bar>
+                </div><span>100%</span></div>
         </div>
 
     </div>
